@@ -2,7 +2,7 @@ name: circle_chart
 description: This is a circle chart with children.
 version: 0.0.1
 author: Burak Akten <burakakten.ba@gmail.com>
-homepage:
+homepage: https://github.com/BurakAkten/circle_chart
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
