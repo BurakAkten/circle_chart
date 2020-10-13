@@ -5,7 +5,7 @@
 This is a library for creating an animated circle chart widget and add given other widget under the chart.
 
 <p>
-<img src="https://https://github.com/BurakAkten/circle_chart/tree/main/gifs/circle-chart.gif" alt="drawing" width="230px"  /> 
+<img src="https://github.com/BurakAkten/circle_chart/tree/main/gifs/circle-chart.gif" alt="drawing" width="230px"  /> 
 </p>
 
 ## Installation
