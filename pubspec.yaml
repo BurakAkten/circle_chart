@@ -1,6 +1,6 @@
 name: circle_chart
 description: This is a library for creating an animated circle chart widget and add given other widget under the chart.
-version: 0.0.2
+version: 0.0.3
 authors:
   - Burak Akten <burakakten.ba@gmail.com>
 homepage: https://github.com/BurakAkten/circle_chart
