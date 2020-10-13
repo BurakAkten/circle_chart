@@ -1,3 +1,9 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - 2020-10-13.
 
-* TODO: Describe initial release.
+*  Readme updated.
+*  Code formatted.
+*  Dartdoc added.
+
+## [0.0.1] - 2020-10-09.
+
+*  First release.

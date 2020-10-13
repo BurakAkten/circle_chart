@@ -1,7 +1,8 @@
 name: circle_chart
-description: This is a circle chart with children.
-version: 0.0.1
-author: Burak Akten <burakakten.ba@gmail.com>
+description: This is a library for creating an animated circle chart widget and add given other widget under the chart.
+version: 0.0.2
+authors:
+  - Burak Akten <burakakten.ba@gmail.com>
 homepage: https://github.com/BurakAkten/circle_chart
 
 environment:

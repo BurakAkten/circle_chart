@@ -1,14 +1,54 @@
+[![pub package](https://img.shields.io/pub/v/circle_chart.svg)](https://pub.dartlang.org/packages/circle_chart)
+
 # circle_chart
 
-This is a circle chart with children widgets.
+This is a library for creating an animated circle chart widget and add given other widget under the chart.
+
+<p>
+<img src="https://https://github.com/BurakAkten/circle_chart/tree/main/gifs/circle-chart.gif" alt="drawing" width="230px"  /> 
+</p>
+
+## Installation
+
+Install the latest version [from pub](https://pub.dev/packages/circle_chart/install).
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+Import the package:
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```dart
+import 'package:circle_chart/circle_chart.dart';
+```
+Create a CircleChart widget and use in your build method:
+
+```dart
+Widget chart = CircleChart(
+      progressNumber: 4, 
+      maxNumber: 10, 
+      children: 
+      [
+          Icon(Icons.arrow_upward),
+          Text('This is kind of circle chart.',),
+          Text("This is kind of description",
+               style: Theme.of(context).textTheme.headline4),
+       ]);
+```
+```dart
+Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              child: chart
+            )
+          ],
+        ),
+      ),
+    );
+  }
+```
