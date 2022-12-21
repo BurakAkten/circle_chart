@@ -6,21 +6,21 @@ import 'dart:math' as math;
 /// controlling the animation moves.
 /// Also this class has [backgroundColor] and [progressColor] to control these colors.
 class CirclePainter extends CustomPainter {
-  final Color progressColor;
-  final Color backgroundColor;
+  final Color? progressColor;
+  final Color? backgroundColor;
   final double progressNumber;
   final int maxNumber;
   final double fraction;
   final Animation<double> animation;
-  Paint _paint;
+  late Paint _paint;
 
   /// The [CirclePainter] constructor has four required parameters that are [progressNumber],
   /// [maxNumber], [fraction] and [animation].
   CirclePainter(
-      {@required this.progressNumber,
-      @required this.maxNumber,
-      @required this.fraction,
-      @required this.animation,
+      {required this.progressNumber,
+      required this.maxNumber,
+      required this.fraction,
+      required this.animation,
       this.backgroundColor,
       this.progressColor}) {
     _paint = Paint()

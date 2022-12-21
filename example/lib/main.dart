@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:circle_chart/circle_chart.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -15,22 +17,20 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Circle chart Demo'),
+      home: const MyHomePage(title: 'Circle chart Demo'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  MyHomePageState createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
+class MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,18 +41,20 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(
-              child: CircleChart(progressNumber: 4, maxNumber: 10, children: [
-                Icon(Icons.arrow_upward),
-                Text(
+            CircleChart(
+              progressNumber: 4,
+              maxNumber: 10,
+              children: [
+                const Icon(Icons.arrow_upward),
+                const Text(
                   'This is kind of circle chart.',
                 ),
                 Text(
                   "This is kind of description",
                   style: Theme.of(context).textTheme.headline4,
                 ),
-              ]),
-            )
+              ],
+            ),
           ],
         ),
       ),

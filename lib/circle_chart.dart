@@ -13,25 +13,26 @@ class CircleChart extends StatefulWidget {
   final bool showRate;
   final double width;
   final double height;
-  final TextStyle rateTextStyle;
+  final TextStyle? rateTextStyle;
   final Duration animationDuration;
-  final Color progressColor;
-  final Color backgroundColor;
+  final Color? progressColor;
+  final Color? backgroundColor;
   final List<Widget> children;
 
   /// The [CirclePainter] constructor has two required parameters that are [progressNumber] and
   /// [maxNumber]. Also have some default parameter and optional parameters.
-  CircleChart(
-      {@required this.progressNumber,
-      @required this.maxNumber,
-      this.children,
-      this.showRate = true,
-      this.rateTextStyle,
-      this.animationDuration = const Duration(seconds: 1),
-      this.backgroundColor,
-      this.progressColor,
-      this.width = 128,
-      this.height = 128}) {
+  CircleChart({
+    required this.progressNumber,
+    required this.maxNumber,
+    this.children = const [],
+    this.showRate = true,
+    this.rateTextStyle,
+    this.animationDuration = const Duration(seconds: 1),
+    this.backgroundColor,
+    this.progressColor,
+    this.width = 128,
+    this.height = 128,
+  }) {
     assert(progressNumber > 0 && maxNumber > 0 && progressNumber < maxNumber);
   }
 
@@ -41,9 +42,9 @@ class CircleChart extends StatefulWidget {
 
 /// This [CircleChartState] class k'nd of class that handle animation and state of [CircleChart] widget.
 class CircleChartState extends State<CircleChart> with SingleTickerProviderStateMixin {
-  CirclePainter _painter;
-  Animation<double> _animation;
-  AnimationController _controller;
+  late CirclePainter _painter;
+  late Animation<double> _animation;
+  late AnimationController _controller;
   double _fraction = 0.0;
 
   /// Animation controller and animation initialized in this method called [initState]
@@ -99,7 +100,7 @@ class CircleChartState extends State<CircleChart> with SingleTickerProviderState
                   aspectRatio: 1.0,
                   child: AnimatedBuilder(
                     animation: _controller,
-                    builder: (BuildContext context, Widget child) {
+                    builder: (BuildContext context, Widget? child) {
                       return CustomPaint(painter: _painter);
                     },
                   ),
@@ -117,7 +118,7 @@ class CircleChartState extends State<CircleChart> with SingleTickerProviderState
         ),
         Container(
           alignment: Alignment.center,
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: widget.children ?? []),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: widget.children),
         ),
       ],
     );

@@ -1,4 +1,4 @@
-package com.bakten.example
+package com.bakten.example.example
 
 import io.flutter.embedding.android.FlutterActivity
 

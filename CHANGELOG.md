@@ -1,3 +1,7 @@
+## [1.0.0] - 2022-12-21.
+
+*  Migration to Null Safety.
+
 ## [0.0.3] - 2020-10-13.
 
 *  Readme updated.

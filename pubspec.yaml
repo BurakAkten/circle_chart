@@ -1,15 +1,13 @@
 name: circle_chart
 description: This is a library for creating an animated circle chart widget and add given other widget under the chart.
-version: 0.0.3
-authors:
-  - Burak Akten <burakakten.ba@gmail.com>
+version: 1.0.0
 homepage: https://github.com/BurakAkten/circle_chart
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.17.0 <3.0.0'
 
 dependencies:
-  auto_size_text: ^2.1.0
+  auto_size_text: ^3.0.0
   flutter:
     sdk: flutter
 
